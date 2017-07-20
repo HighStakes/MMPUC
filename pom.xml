@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<maven.compiler.target>1.7</maven.compiler.target>
-  		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.source>1.7</maven.compiler.source>
 		<servlet.version>2.5</servlet.version>
 		<hibernate.version>4.2.21.Final</hibernate.version>
 		<INSTANCE_CONNECTION_NAME>mmpuc-web:us-east1:mmpuc-web</INSTANCE_CONNECTION_NAME>
@@ -18,11 +18,23 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>mysql-socket-factory-connector-j-6</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>mysql-socket-factory</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>4.2.21.Final</version>
 		</dependency>
-		 
+
 		<dependency>
 			<groupId>org.hibernate.common</groupId>
 			<artifactId>hibernate-commons-annotations</artifactId>
@@ -54,11 +66,7 @@
 			<version>5.1.37</version>
 
 		</dependency>
-		<dependency>
-			<groupId>com.google.cloud.sql</groupId>
-			<artifactId>mysql-socket-factory</artifactId>
-			<version>1.0.2</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
