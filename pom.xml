@@ -5,6 +5,8 @@
 	<artifactId>MMPUC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
+		<maven.compiler.target>1.7</maven.compiler.target>
+  		<maven.compiler.source>1.7</maven.compiler.source>
 		<servlet.version>2.5</servlet.version>
 		<hibernate.version>4.2.21.Final</hibernate.version>
 		<INSTANCE_CONNECTION_NAME>mmpuc-web:us-east1:mmpuc-web</INSTANCE_CONNECTION_NAME>
