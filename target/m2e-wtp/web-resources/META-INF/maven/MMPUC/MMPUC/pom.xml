@@ -5,11 +5,11 @@
 	<groupId>MMPUC</groupId>
 	<artifactId>MMPUC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<prerequisites>
 		<maven>3.1.0</maven>
 	</prerequisites>
-	
+
 	<properties>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<maven.compiler.source>1.7</maven.compiler.source>
@@ -132,6 +132,8 @@
 			</resource>
 		</resources>
 
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -151,6 +153,15 @@
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>appengine-maven-plugin</artifactId>
 				<version>1.3.1</version>
+				<configuration>
+
+					<deployables>
+
+						<param>${project.build.directory}/appengine-staging/app.yaml</param>
+
+						<param>${project.build.directory}/appengine-staging/WEB-INF/appengine-generated/queue.yaml</param>
+					</deployables>
+				</configuration>
 			</plugin>
 
 			<plugin>
@@ -167,11 +178,8 @@
 				<artifactId>appengine-maven-plugin</artifactId>
 				<version>1.9.54</version>
 			</plugin>
-
-
-
-
 		</plugins>
+
 	</build>
 
 </project>
